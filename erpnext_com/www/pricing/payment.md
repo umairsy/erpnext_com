@@ -15,11 +15,15 @@
 	</thead>
 	<tbody>
 		{% for plan in [
-			{"name": "5 users, 5GB space", "usd": "$ 300"},
-			{"name": "25 users, 10GB space", "usd": "$ 600"},
-			{"name": "100 users, 20GB space", "usd": "$ 1500"},
-			{"name": "Unlimited users, 50GB space", "usd": "$ 3000"},
-			{"name": "Functional Support for Self Hosted", "usd": "$ 600"}
+			{"name": "5 users, 5GB space", "usd": "$ 299"},
+			{"name": "10 users, 5GB space", "usd": "$ 449"},
+			{"name": "15 users, 5GB space", "usd": "$ 599"},
+			{"name": "25 users, 10GB space", "usd": "$ 899"},
+			{"name": "50 users, 15GB space", "usd": "$ 1499"},
+			{"name": "100 users, 20GB space", "usd": "$ 1999"},
+			{"name": "1000 Users, 50GB space", "usd": "$ 3999"},
+			{"name": "5000 Users, 200GB space", "usd": "$ 10000"},
+			{"name": "Support for Self-Hosted", "usd": "$ 1799"}
 		] -%}
 			{% set inr = frappe.utils.fmt_money(
 				frappe.utils.cint(frappe.utils.flt(frappe.utils.flt(plan.usd[1:]) * 60.0 * 1.1236 / 1000.0, 0) * 1000),
